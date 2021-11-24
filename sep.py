@@ -1,6 +1,5 @@
 import csv
 
-
 file = open("./DATA/data.csv")
 cont = list(csv.reader(file))
 #
@@ -12,14 +11,14 @@ for a in cont[1:]:
     try:
         globals()[var_name_dict[a[-1]]].append(a)
     except:
-        print(False,"code error")
-        # print (a[-1])
-# globals()[var_name_dict[a]]
-for a in var_name_dict: 
+        print(False, "code error")
+
+# globals()[var_name_dict[a]] this used view list of a state
+for a in var_name_dict:
     filep = "./DATA/"+a+".csv"
-    with open(filep, 'w') as csvfile: 
-        # creating a csv writer object 
-        csvwriter = csv.writer(csvfile) 
+    with open(filep, 'w') as csvfile:
+        # creating a csv writer object
+        csvwriter = csv.writer(csvfile)
         csvwriter.writerows(globals()[var_name_dict[a]])
 file.close()
 print(False)
