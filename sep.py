@@ -24,3 +24,4 @@ for a in var_name_dict:
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerows(globals()[var_name_dict[a]])
 file.close()
+print(True)
