@@ -1,5 +1,5 @@
 import csv
-
+#file sep acc to state
 file = open("./DATA/data.csv")
 cont = list(csv.reader(file))
 #
