@@ -12,7 +12,7 @@ for a in cont[1:]:
         globals()[var_name_dict[a[-1]]].append(a)
     except:
         print(False, "code error")
-
+# 
 # globals()[var_name_dict[a]] this used view list of a state
 for a in var_name_dict:
     filep = "./DATA/"+a+".csv"
